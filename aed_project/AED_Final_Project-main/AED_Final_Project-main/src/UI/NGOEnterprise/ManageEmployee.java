@@ -280,7 +280,7 @@ public class ManageEmployee extends javax.swing.JPanel {
         String name = txtName.getText();
         
         organization.getEmployeeDirectory().createEmployee(name);
-        
+        populateTbl(organization);
         
         txtName.setText("");
       }
@@ -304,10 +304,12 @@ public class ManageEmployee extends javax.swing.JPanel {
     private void txtNameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNameKeyTyped
         // TODO add your handling code here:
         char typedName = evt.getKeyChar();
-        if(Character.isAlphabetic(typedName) && !Character.isWhitespace(typedName)){
+        if(!Character.isAlphabetic(typedName) && !Character.isWhitespace(typedName)){
             evt.consume();
         }
-        
+        //Restrict the length to 256 
+        if(txtName.getText().length() > 255){
+                evt.consume();
         }
     }//GEN-LAST:event_txtNameKeyTyped
 
