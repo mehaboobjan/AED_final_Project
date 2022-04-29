@@ -269,7 +269,18 @@ public class ManageEmployee extends javax.swing.JPanel {
     //add an employee
     private void btnAddEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddEmployeeActionPerformed
         // TODO add your handling code here:
+        if(txtName.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null,"Please fill the Empty fields");
+        }else{
         
+        Organization organization =(Organization)comboOrgSelect.getSelectedItem();
+        String name = txtName.getText();
+        
+        organization.getEmployeeDirectory().createEmployee(name);
+        populateTbl(organization);
+        
+        txtName.setText("");
+      }
     }//GEN-LAST:event_btnAddEmployeeActionPerformed
     //go to previous page
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
@@ -289,7 +300,13 @@ public class ManageEmployee extends javax.swing.JPanel {
     //name validation
     private void txtNameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNameKeyTyped
         // TODO add your handling code here:
-        
+        char typedName = evt.getKeyChar();
+        if(!Character.isAlphabetic(typedName) && !Character.isWhitespace(typedName)){
+            evt.consume();
+        }
+        //Restrict the length to 256 
+        if(txtName.getText().length() > 255){
+                evt.consume();
         }
     }//GEN-LAST:event_txtNameKeyTyped
 
