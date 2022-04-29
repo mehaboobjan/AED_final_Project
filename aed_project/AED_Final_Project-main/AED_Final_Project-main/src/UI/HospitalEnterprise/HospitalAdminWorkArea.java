@@ -215,7 +215,10 @@ public class HospitalAdminWorkArea extends javax.swing.JPanel {
 
     private void btnManageOrganizationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageOrganizationActionPerformed
         // TODO add your handling code here:
-      
+         ManageOrganization mngOrg = new ManageOrganization(userProcessContainer, enterprise.getOrganizationDirectory());
+        userProcessContainer.add("ManageOrganization", mngOrg);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
     }//GEN-LAST:event_btnManageOrganizationActionPerformed
 
 
