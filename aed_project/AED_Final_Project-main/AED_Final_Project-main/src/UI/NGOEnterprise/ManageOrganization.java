@@ -30,7 +30,7 @@ public class ManageOrganization extends javax.swing.JPanel {
         this.userProcessContainer=userProcessContainer;
         this.orgdirectory=orgdirectory;
         populateTbl();
-      
+        populateCmb();
 
     }
     //populate newly added organization
