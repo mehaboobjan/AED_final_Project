@@ -26,7 +26,7 @@ import org.jfree.data.category.DefaultCategoryDataset;
 
 /**
  *
- * @author ymayank97
+ * @author jan
  */
 public class SupplyRequest extends javax.swing.JPanel {
 

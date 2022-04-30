@@ -31,7 +31,7 @@ import org.jfree.data.category.DefaultCategoryDataset;
 
 /**
  *
- * @author ymayank97
+ * @author jan
  */
 public class NGOManagerWorkArea extends javax.swing.JPanel {
 
