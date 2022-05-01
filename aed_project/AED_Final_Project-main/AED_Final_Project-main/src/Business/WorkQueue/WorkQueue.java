@@ -11,11 +11,11 @@ import java.util.ArrayList;
  *
  * @author jan
  */
-public class WorkRequestQueue {
+public class WorkQueue {
     
     private ArrayList<WorkRequest> workRequestList;
     
-    public WorkRequestQueue(){
+    public WorkQueue(){
         workRequestList=new ArrayList<>();
     }
 
