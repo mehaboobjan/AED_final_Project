@@ -7,25 +7,26 @@ package Business.Provider;
 
 /**
  *
- * @author Sarvesh
+ * @author vidhi
  */
 public class Item {
     private String itemId;
-    private static int sCount=1;
-    private int quantity;
+    private static int itemCount=1;
+    private int itemQuantity;
     private String requirementType;
     private String requirement;
-    //item class constructor to autogenerate id
+
+    //item class constructor to auto generate id
     public Item(){
-        itemId="Item"+(+sCount);        
+        itemId="Item"+(+itemCount);        
     }
 
-    public int getQuantity() {
-        return quantity;
+    public int getItemQuantity() {
+        return itemQuantity;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setItemQuantity(int itemQuantity) {
+        this.itemQuantity = itemQuantity;
     }
     public String getItemId() {
         return itemId;

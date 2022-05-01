@@ -17,7 +17,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Sarvesh
+ * @author vidhi
  */
 public class ManageEmployee extends javax.swing.JPanel {
 
@@ -42,7 +42,7 @@ public class ManageEmployee extends javax.swing.JPanel {
         for (Employee employee : organization.getEmployeeDirectory().getEmployeeList()){
             Object[] row = new Object[5];
             row[0] = employee;
-            row[2] = employee.getId();
+            row[2] = employee.getEmpID();
             row[1] = organization.getName();
             model.addRow(row);
         }

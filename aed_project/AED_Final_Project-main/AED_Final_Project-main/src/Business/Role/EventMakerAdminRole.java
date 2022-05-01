@@ -5,7 +5,7 @@
  */
 package Business.Role;
 
-import Business.Ecosystem;
+import Business.MainSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
@@ -14,18 +14,19 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Sarvesh
+ * @author vidhi
  */
 public class EventMakerAdminRole extends Role{
-    //overriding main panel with event maker admin work area whenever event maker admin role is called
+ 
+	//overriding main panel with event maker admin work area whenever event maker admin role is called
     @Override
-    public JPanel createWorkArea(JPanel userProcessContainer,UserAccount account,Organization organization,Enterprise enterprise,Ecosystem system){
+    public JPanel createWorkArea(JPanel userProcessContainer,UserAccount account,Organization organization,Enterprise enterprise,MainSystem system){
         return new EventMakerAdminWorkArea(userProcessContainer,/*account,(ChangeMakerOrganization)organization,*/enterprise/*,system*/);
     }
-        @Override
-        public String toString()
-{
-   return Role.RoleType.EventMakerAdmin.getValue();
-}
-
+ 
+    @Override
+    public String toString()
+    {
+    	return Role.RoleType.EventMakerAdmin.getValue();
+    }
 }

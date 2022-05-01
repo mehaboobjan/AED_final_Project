@@ -9,10 +9,11 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Sarvesh
+ * @author vidhi
  */
 public class ProviderDirectory {
-    private ArrayList<Provider> providerList;
+
+	private ArrayList<Provider> providerList;
     
     
     public ProviderDirectory() {

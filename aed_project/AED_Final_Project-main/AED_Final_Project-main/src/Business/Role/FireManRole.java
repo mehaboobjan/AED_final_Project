@@ -5,7 +5,7 @@
  */
 package Business.Role;
 
-import Business.Ecosystem;
+import Business.MainSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.FireManOrganization;
 import Business.Organization.Organization;
@@ -15,12 +15,12 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Sarvesh
+ * @author vidhi
  */
 public class FireManRole extends Role{
     //overriding main panel with fireman work area whenever fireman role is called
     @Override
-    public JPanel createWorkArea(JPanel userProcessContainer,UserAccount account,Organization organization,Enterprise enterprise,Ecosystem system){
+    public JPanel createWorkArea(JPanel userProcessContainer,UserAccount account,Organization organization,Enterprise enterprise,MainSystem system){
         return new FireManWorkArea(userProcessContainer,account,(FireManOrganization)organization,enterprise,system);
     }
         @Override

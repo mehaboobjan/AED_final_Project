@@ -7,7 +7,7 @@ package Business.WorkQueue;
 
 /**
  *
- * @author jan
+ * @author vidhi
  */
 public class FireManWorkRequest extends WorkRequest{
     private String description;

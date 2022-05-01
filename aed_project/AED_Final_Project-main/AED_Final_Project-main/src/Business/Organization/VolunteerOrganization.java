@@ -12,7 +12,7 @@ import java.util.HashSet;
 
 /**
  *
- * @author jan
+ * @author vidhi
  */
 public class VolunteerOrganization extends Organization{
 

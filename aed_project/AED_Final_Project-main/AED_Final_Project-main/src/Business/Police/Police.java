@@ -9,7 +9,7 @@ import Business.WorkQueue.WorkRequestQueue;
 
 /**
  *
- * @author jan
+ * @author vidhi
  */
 public class Police {
     private String policeName;

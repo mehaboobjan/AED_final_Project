@@ -7,7 +7,7 @@ package Business.WorkQueue;
 
 /**
  *
- * @author jan
+ * @author vidhi
  */
 public class NGOWorkRequest extends WorkRequest{
     private String title;

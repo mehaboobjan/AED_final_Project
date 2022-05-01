@@ -5,7 +5,7 @@
  */
 package UI.SystemAdmin;
 
-import Business.Ecosystem;
+import Business.MainSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import java.awt.CardLayout;
@@ -16,7 +16,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Sarvesh
+ * @author ymayank97
  */
 public class ManageEnterprise extends javax.swing.JPanel {
 
@@ -24,9 +24,9 @@ public class ManageEnterprise extends javax.swing.JPanel {
      * Creates new form ManageEnterprise
      */
     private JPanel panelWorkArea;
-    private Ecosystem system;
+    private MainSystem system;
     
-    public ManageEnterprise(JPanel userProcessContainer,Ecosystem system) {
+    public ManageEnterprise(JPanel userProcessContainer,MainSystem system) {
         initComponents();
         this.panelWorkArea=userProcessContainer;
         this.system=system;
@@ -57,8 +57,8 @@ public class ManageEnterprise extends javax.swing.JPanel {
             for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList()) {
                 Object[] row = new Object[3];
                 row[0] = enterprise;
-                row[1] = network.getName();
-                row[2] = enterprise.getEnterpriseType().getValue();
+                row[1] = network.getNetworkName();
+                row[2] = enterprise.getEnterpriseType().getEnterpriseTypeValue();
                 model.addRow(row);
             }
         }
