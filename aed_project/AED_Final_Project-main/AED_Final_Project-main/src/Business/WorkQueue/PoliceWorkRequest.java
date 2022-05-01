@@ -7,7 +7,7 @@ package Business.WorkQueue;
 
 /**
  *
- * @author jan
+ * @author vidhi
  */
 public class PoliceWorkRequest extends WorkRequest{
     private String description;

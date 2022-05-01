@@ -7,7 +7,7 @@ package Business.WorkQueue;
 
 /**
  *
- * @author jan
+ * @author vidhi
  */
 public class ProviderWorkRequest extends WorkRequest{
     private int quantity;

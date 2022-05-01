@@ -5,23 +5,23 @@
  */
 package UI.SystemAdmin;
 
-import Business.Ecosystem;
+import Business.MainSystem;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 
 /**
  *
- * @author Sarvesh
+ * @author ymayank97
  */
 public class SystemAdminWorkArea extends javax.swing.JPanel {
 
     /**
      * Creates new form SystemAdminWorkArea
      */
-    private Ecosystem system;
+    private MainSystem system;
     private JPanel panelWorkArea;
     
-     public SystemAdminWorkArea(JPanel userProcessContainer,Ecosystem system) {
+     public SystemAdminWorkArea(JPanel userProcessContainer,MainSystem system) {
         initComponents();
         this.panelWorkArea=userProcessContainer;
         this.system=system;

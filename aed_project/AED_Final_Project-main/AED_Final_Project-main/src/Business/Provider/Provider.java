@@ -5,24 +5,24 @@
  */
 package Business.Provider;
 
-import Business.WorkQueue.WorkQueue;
+import Business.WorkQueue.WorkRequestQueue;
 
 /**
  *
- * @author Sarvesh
+ * @author vidhi
  */
 public class Provider {
-    private String sName;
-    private static int sCount=1;
+    private String supplierName;
+    private static int supplierCount=1;
     private String supplierId;
-    private WorkQueue workQueue;
+    private WorkRequestQueue supplierWorkQueue;
     private ItemDirectory itemDirectory;
     private Item item;
     //provider class constructor to update ids, work queue and item directory
     public Provider() {
         
-        supplierId = "SUP"+(++sCount);
-        workQueue= new WorkQueue();
+        supplierId = "SUP"+(++supplierCount);
+        supplierWorkQueue= new WorkRequestQueue();
         itemDirectory = new ItemDirectory();
         item = new Item();
     }
@@ -43,20 +43,20 @@ public class Provider {
         this.itemDirectory = itemDirectory;
     }
 
-    public String getsName() {
-        return sName;
+    public String getSupplierName() {
+        return supplierName;
     }
 
-    public void setsName(String sName) {
-        this.sName = sName;
+    public void setSupplierName(String sName) {
+        this.supplierName = sName;
     }
     
-    public WorkQueue getWorkQueue() {
-        return workQueue;
+    public WorkRequestQueue getSupplierWorkQueue() {
+        return supplierWorkQueue;
     }
 
-    public void setWorkQueue(WorkQueue workQueue) {
-        this.workQueue = workQueue;
+    public void setSupplierWorkQueue(WorkRequestQueue workQueue) {
+        this.supplierWorkQueue = workQueue;
     }
     
     public String getSupplierId() {
@@ -69,6 +69,6 @@ public class Provider {
 
     @Override
     public String toString(){
-        return sName;
+        return supplierName;
     }
 }

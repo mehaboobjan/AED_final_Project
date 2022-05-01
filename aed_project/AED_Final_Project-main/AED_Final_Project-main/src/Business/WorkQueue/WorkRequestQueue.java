@@ -9,13 +9,13 @@ import java.util.ArrayList;
 
 /**
  *
- * @author jan
+ * @author vidhi
  */
-public class WorkQueue {
+public class WorkRequestQueue {
     
     private ArrayList<WorkRequest> workRequestList;
     
-    public WorkQueue(){
+    public WorkRequestQueue(){
         workRequestList=new ArrayList<>();
     }
 

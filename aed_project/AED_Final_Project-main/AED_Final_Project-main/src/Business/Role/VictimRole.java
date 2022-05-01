@@ -5,7 +5,7 @@
  */
 package Business.Role;
 
-import Business.Ecosystem;
+import Business.MainSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
 import Business.Organization.VictimOrganization;
@@ -15,12 +15,12 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Sarvesh
+ * @author vidhi
  */
 public class VictimRole extends Role{
     //overriding main panel with victim work area whenever victim role is called
     @Override
-    public JPanel createWorkArea(JPanel userProcessContainer,UserAccount account,Organization organization,Enterprise enterprise,Ecosystem system){
+    public JPanel createWorkArea(JPanel userProcessContainer,UserAccount account,Organization organization,Enterprise enterprise,MainSystem system){
         return new EventSeekerWorkArea(userProcessContainer,account,(VictimOrganization)organization,enterprise,system);
     }
         @Override

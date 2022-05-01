@@ -12,7 +12,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author rajen
+ * @author vidhi
  */
 public class EventSeekerAdminWorkArea extends javax.swing.JPanel {
 

@@ -5,7 +5,7 @@
  */
 package UI.SystemAdmin;
 
-import Business.Ecosystem;
+import Business.MainSystem;
 import Business.Network.Network;
 import java.awt.CardLayout;
 import java.awt.Component;
@@ -15,7 +15,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Sarvesh
+ * @author ymayank97
  */
 public class ManageNetwork extends javax.swing.JPanel {
 
@@ -23,9 +23,9 @@ public class ManageNetwork extends javax.swing.JPanel {
      * Creates new form ManageNetwork
      */
     private JPanel panelWorkArea;
-    private Ecosystem system;
+    private MainSystem system;
     
-    public ManageNetwork(JPanel userProcessContainer,Ecosystem system) {
+    public ManageNetwork(JPanel userProcessContainer,MainSystem system) {
         initComponents();
         this.panelWorkArea=userProcessContainer;
         this.system=system;
@@ -231,7 +231,7 @@ public class ManageNetwork extends javax.swing.JPanel {
         String name = txtName.getText();
 
         Network network = system.addNetwork();
-        network.setName(name);
+        network.setNetworkName(name);
 
         populateTableNetwork();
         txtName.setText("");

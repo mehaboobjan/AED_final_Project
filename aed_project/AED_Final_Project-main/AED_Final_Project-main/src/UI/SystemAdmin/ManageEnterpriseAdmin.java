@@ -5,7 +5,7 @@
  */
 package UI.SystemAdmin;
 
-import Business.Ecosystem;
+import Business.MainSystem;
 import Business.Employee.Employee;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
@@ -24,7 +24,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Sarvesh
+ * @author ymayank97
  */
 public class ManageEnterpriseAdmin extends javax.swing.JPanel {
 
@@ -32,9 +32,9 @@ public class ManageEnterpriseAdmin extends javax.swing.JPanel {
      * Creates new form ManageEnterpriseAdmin
      */
     private JPanel panelWorkArea;
-    private Ecosystem system;
+    private MainSystem system;
     
-    public ManageEnterpriseAdmin(JPanel userProcessContainer,Ecosystem system) {
+    public ManageEnterpriseAdmin(JPanel userProcessContainer,MainSystem system) {
         initComponents();
         this.panelWorkArea=userProcessContainer;
         this.system=system;
@@ -51,7 +51,7 @@ public class ManageEnterpriseAdmin extends javax.swing.JPanel {
                 for (UserAccount userAccount : enterprise.getUserAccountDirectory().getUserAccountList()) {
                     Object[] row = new Object[3];
                     row[0] = enterprise.getName();
-                    row[1] = network.getName();
+                    row[1] = network.getNetworkName();
                     row[2] = userAccount;
 
                     model.addRow(row);
@@ -342,7 +342,7 @@ public class ManageEnterpriseAdmin extends javax.swing.JPanel {
         String name = txtAdmin.getText();
 
         Employee employee = enterprise.getEmployeeDirectory().createEmployee(name);
-        if (Ecosystem.checkIfUsernameIsUnique(username)) {
+        if (MainSystem.checkIfUsernameIsUnique(username)) {
             UserAccount account = null;
             if (enterprise.getEnterpriseType() == Enterprise.EnterpriseType.Community) {
                 account = enterprise.getUserAccountDirectory().createUserAccount(username, password, employee, new CommunityAdminRole());

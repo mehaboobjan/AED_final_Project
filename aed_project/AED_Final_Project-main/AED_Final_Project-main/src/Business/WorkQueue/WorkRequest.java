@@ -18,7 +18,7 @@ import java.util.Date;
 
 /**
  *
- * @author jan
+ * @author vidhi
  */
 public abstract class WorkRequest {
     private String subject;

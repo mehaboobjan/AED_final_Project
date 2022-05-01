@@ -20,7 +20,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author rajen
+ * @author ymayank97
  */
 public class EventMakerWorkArea extends javax.swing.JPanel {
 

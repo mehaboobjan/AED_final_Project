@@ -19,7 +19,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author rajen
+ * @author ymayank97
  */
 public class FireManWorkArea extends javax.swing.JPanel {
     private JPanel userProcessContainer;

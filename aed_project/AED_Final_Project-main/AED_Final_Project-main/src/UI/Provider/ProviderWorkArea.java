@@ -6,7 +6,7 @@
 package UI.Provider;
 
 
-import Business.Ecosystem;
+import Business.MainSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
 import Business.Organization.ProviderOrganization;
@@ -14,7 +14,7 @@ import Business.Provider.Item;
 import Business.Provider.Provider;
 import Business.UserAccount.UserAccount;
 import Business.WorkQueue.ProviderWorkRequest;
-import Business.WorkQueue.WorkQueue;
+import Business.WorkQueue.WorkRequestQueue;
 import Business.WorkQueue.WorkRequest;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -22,7 +22,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Sarvesh
+ * @author vidhi
  */
 public class ProviderWorkArea extends javax.swing.JPanel {
 
@@ -33,10 +33,10 @@ public class ProviderWorkArea extends javax.swing.JPanel {
     private UserAccount account;
     private Organization organization;
     private Enterprise enterprise;
-    private Ecosystem system;
+    private MainSystem system;
     private Provider p;
     
-    public ProviderWorkArea(JPanel userProcessContainer,UserAccount account,Organization organization,Enterprise enterprise,Ecosystem system) {
+    public ProviderWorkArea(JPanel userProcessContainer,UserAccount account,Organization organization,Enterprise enterprise,MainSystem system) {
         initComponents();
         this.userProcessContainer=userProcessContainer;
         this.account=account;
@@ -45,14 +45,14 @@ public class ProviderWorkArea extends javax.swing.JPanel {
         this.system=system;
        
           for (Provider provider : ((ProviderOrganization)organization).getProviderList().getProviderList()) {
-            if (account.getEmployee().getName().equals(provider.getsName())) {
+            if (account.getEmployee().getEmployeeName().equals(provider.getSupplierName())) {
                  p=provider;
             }
         }
 
-        if (p.getWorkQueue() == null) {
-            WorkQueue w = new WorkQueue();
-            p.setWorkQueue(w);
+        if (p.getSupplierWorkQueue() == null) {
+            WorkRequestQueue w = new WorkRequestQueue();
+            p.setSupplierWorkQueue(w);
         }
         populateTableSupply();
         populateTableCreate();
@@ -65,7 +65,7 @@ public class ProviderWorkArea extends javax.swing.JPanel {
         model.setRowCount(0);
         
         
-        for (WorkRequest work : system.getWorkQueue().getWorkRequestList()){
+        for (WorkRequest work : system.getOrgWorkQueue().getWorkRequestList()){
            if(work instanceof ProviderWorkRequest){ 
             Object[] row = new Object[10];
             row[0] = ((ProviderWorkRequest) work).getRtype();
@@ -89,7 +89,7 @@ public class ProviderWorkArea extends javax.swing.JPanel {
             Object[] row = new Object[10];
             row[0] = item.getRequirementType();
             row[1] = item.getRequirement();
-            row[2] = item.getQuantity();
+            row[2] = item.getItemQuantity();
             model.addRow(row);
             }
             
@@ -366,11 +366,11 @@ public class ProviderWorkArea extends javax.swing.JPanel {
                        
                         if (pwr.getReq().equals(item.getRequirement())&& pwr.getRtype().equals(item.getRequirementType())) {
                             
-                            if (item.getQuantity() - pwr.getQuantity() < 0) {
+                            if (item.getItemQuantity() - pwr.getQuantity() < 0) {
                                 JOptionPane.showMessageDialog(null, "Not enough supply. Wait for sometime");
                                 return;
                             }
-                            item.setQuantity(item.getQuantity() - pwr.getQuantity());
+                            item.setItemQuantity(item.getItemQuantity() - pwr.getQuantity());
                            temp = 1;
                         }   
                     }
@@ -408,11 +408,11 @@ public class ProviderWorkArea extends javax.swing.JPanel {
         }
 
        
-        Item item = p.getItemDirectory().addSupply();
+        Item item = p.getItemDirectory().addItem();
         
         item.setRequirementType(type);
         item.setRequirement(req);
-        item.setQuantity(quantity);
+        item.setItemQuantity(quantity);
 
         populateTableCreate();
 

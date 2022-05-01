@@ -6,7 +6,7 @@
 package UI.VolunteerOrganization;
 
 
-import Business.Ecosystem;
+import Business.MainSystem;
 import Business.Employee.Employee;
 import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
@@ -22,7 +22,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Sarvesh
+ * @author vidhi
  */
 public class ManageUserAccount extends javax.swing.JPanel {
 
@@ -329,7 +329,7 @@ public class ManageUserAccount extends javax.swing.JPanel {
         }else{        
             String userName = txtName.getText();
         String password = txtPassword.getText();
-        if(Ecosystem.checkIfUsernameIsUnique(userName)){
+        if(MainSystem.checkIfUsernameIsUnique(userName)){
         Organization organization = (Organization) comboOrg.getSelectedItem();
         Employee employee = (Employee) comboEmp.getSelectedItem();
         Role role = (Role) comboRole.getSelectedItem();
@@ -338,7 +338,7 @@ public class ManageUserAccount extends javax.swing.JPanel {
         if (organization instanceof VolunteerOrganization){
            Volunteer vt = new Volunteer();
             
-           vt.setVolunteerName(employee.getName());
+           vt.setVolunteerName(employee.getEmployeeName());
            
            ((VolunteerOrganization) organization).getVolunteerList().getVolunteerList().add(vt);
           

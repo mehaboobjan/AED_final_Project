@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author jan
+ * @author vidhi
  */
 public class VolunteerDirectory {
  

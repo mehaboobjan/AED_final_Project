@@ -6,14 +6,14 @@
 package UI.ProviderEnterprise;
 
 
-import Business.Ecosystem;
+import Business.MainSystem;
 import Business.Enterprise.Enterprise;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 
 /**
  *
- * @author Sarvesh
+ * @author vidhi
  */
 public class ProviderAdminWorkArea extends javax.swing.JPanel {
 
@@ -21,10 +21,10 @@ public class ProviderAdminWorkArea extends javax.swing.JPanel {
      * Creates new form EventMakerAdminWorkArea
      */
     private JPanel userProcessContainer;
-    private Ecosystem system;
+    private MainSystem system;
     private Enterprise enterprise;
     
-    public ProviderAdminWorkArea(JPanel userProcessContainer,Enterprise enterprise, Ecosystem ecosystem) {
+    public ProviderAdminWorkArea(JPanel userProcessContainer,Enterprise enterprise, MainSystem ecosystem) {
         initComponents();
         this.enterprise=enterprise;
         this.userProcessContainer=userProcessContainer;

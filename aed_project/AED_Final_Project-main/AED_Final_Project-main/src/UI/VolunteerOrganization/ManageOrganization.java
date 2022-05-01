@@ -15,7 +15,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Sarvesh
+ * @author vidhi
  */
 public class ManageOrganization extends javax.swing.JPanel {
 
@@ -43,7 +43,7 @@ public class ManageOrganization extends javax.swing.JPanel {
         for (Organization organization : orgdirectory.getOrganizationList()){
             Object[] row = new Object[3];
             row[2] = organization.getOrganizationCode();
-            row[0] = organization.getOrgName();
+            row[0] = organization.getOrganizationName();
             row[1]=  organization.getName();
             
             model.addRow(row);

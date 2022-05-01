@@ -5,7 +5,7 @@
  */
 package Business.Role;
 
-import Business.Ecosystem;
+import Business.MainSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.DoctorOrganization;
 import Business.Organization.Organization;
@@ -15,18 +15,19 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Sarvesh
+ * @author vidhi
  */
 public class DoctorRole extends Role{
-    //overriding main panel with doctore work area whenever doctor role is called
+ 
+	//overriding main panel with doctore work area whenever doctor role is called
     @Override
-    public JPanel createWorkArea(JPanel userProcessContainer,UserAccount account,Organization organization,Enterprise enterprise,Ecosystem system){
+    public JPanel createWorkArea(JPanel userProcessContainer,UserAccount account,Organization organization,Enterprise enterprise,MainSystem system){
         return new DoctorWorkArea(userProcessContainer,account,(DoctorOrganization)organization,enterprise,system);
     }
-        @Override
-        public String toString()
-{
-   return Role.RoleType.Doctor.getValue();
-}
 
+    @Override
+    public String toString()
+    {
+    	return Role.RoleType.Doctor.getValue();
+    }
 }

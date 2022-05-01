@@ -18,7 +18,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author rajen
+ * @author ymayank97
  */
 public class DoctorWorkArea extends javax.swing.JPanel {
     private JPanel userProcessContainer;

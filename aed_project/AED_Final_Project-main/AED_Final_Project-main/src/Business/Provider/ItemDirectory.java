@@ -9,14 +9,14 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Sarvesh
+ * @author vidhi
  */
 public class ItemDirectory {
-    private ArrayList<Item> itemList;
+
+	private ArrayList<Item> itemList;
     
     public ItemDirectory() {
         itemList=new ArrayList<>();
-        
     }
 
     public ArrayList<Item> getSupplyList() {
@@ -26,14 +26,15 @@ public class ItemDirectory {
     public void setSupplyList(ArrayList<Item> itemList) {
         this.itemList = itemList;
     }
+
     //add a new item
-    public Item addSupply(){
+    public Item addItem(){
         Item s = new Item();
         itemList.add(s);
         return s;
     }
     //remove item
-    public void removeSupply(Item item){
+    public void removeItem(Item item){
         itemList.remove(item);
     }
     

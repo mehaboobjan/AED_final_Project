@@ -6,7 +6,7 @@
 package UI.VolunteerOrganization;
 
 import UI.EventMakerWorkArea.*;
-import Business.Ecosystem;
+import Business.MainSystem;
 import Business.Enterprise.Enterprise;
 import Business.EventMaker.EventMaker;
 import Business.Organization.EventMakerOrganization;
@@ -16,7 +16,7 @@ import Business.UserAccount.UserAccount;
 import Business.Volunteer.Volunteer;
 import Business.WorkQueue.NGOWorkRequest;
 import Business.WorkQueue.VictimWorkRequest;
-import Business.WorkQueue.WorkQueue;
+import Business.WorkQueue.WorkRequestQueue;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
@@ -25,7 +25,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Sarvesh
+ * @author vidhi
  */
 public class DashboardVolunteer extends javax.swing.JPanel {
 
@@ -36,10 +36,10 @@ public class DashboardVolunteer extends javax.swing.JPanel {
     private UserAccount account;
     private Organization organization;
     private Enterprise enterprise;
-    private Ecosystem system;
+    private MainSystem system;
     private Volunteer vm;
     
-    public DashboardVolunteer(JPanel userProcessContainer,UserAccount account,Organization organization,Enterprise enterprise,Ecosystem system) {
+    public DashboardVolunteer(JPanel userProcessContainer,UserAccount account,Organization organization,Enterprise enterprise,MainSystem system) {
         initComponents();
         this.userProcessContainer=userProcessContainer;
         this.account=account;
@@ -49,7 +49,7 @@ public class DashboardVolunteer extends javax.swing.JPanel {
        
         for (Volunteer volunteer:((VolunteerOrganization)organization).getVolunteerList().getVolunteerList())
         {
-            if (account.getEmployee().getName().equals(volunteer.getVolunteerName())) {
+            if (account.getEmployee().getEmployeeName().equals(volunteer.getVolunteerName())) {
                  vm=volunteer;
                  
                 System.out.println("Volunteer Name" + vm.getVolunteerName());
@@ -58,9 +58,9 @@ public class DashboardVolunteer extends javax.swing.JPanel {
         }
         
         
-            if(vm.getWorkqueue()== null){
-            WorkQueue w = new WorkQueue();
-            vm.setWorkqueue(w);
+            if(vm.getVolunteerWorkQueue()== null){
+            WorkRequestQueue w = new WorkRequestQueue();
+            vm.setVolunteerWorkQueue(w);
             
         }
         populateTableEvent();
@@ -73,7 +73,7 @@ public class DashboardVolunteer extends javax.swing.JPanel {
         model.setRowCount(0);
         
         
-        for (WorkRequest work : system.getWorkQueue().getWorkRequestList()){
+        for (WorkRequest work : system.getOrgWorkQueue().getWorkRequestList()){
            if(work instanceof NGOWorkRequest){ 
             Object[] row = new Object[10];
             row[0] = work;
