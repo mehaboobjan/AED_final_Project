@@ -13,7 +13,7 @@ import Business.Role.VictimAdminRole;
 
 /**
  *
- * @author vidhi
+ * @author rajen
  */
 public class CommunityEnterprise extends Enterprise{
     public CommunityEnterprise(String name){

@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author vidhi
+ * @author jan
  */
 public class HospitalAdminWorkArea extends javax.swing.JPanel {
 

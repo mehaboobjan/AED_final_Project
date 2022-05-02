@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author vidhi
+ * @author sarvesh
  */
 public class ProviderAdminRole extends Role{
     //overriding main panel with provier admin work area whenever provider admin role is called

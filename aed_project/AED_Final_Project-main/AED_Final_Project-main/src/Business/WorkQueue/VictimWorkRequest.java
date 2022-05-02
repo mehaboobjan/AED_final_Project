@@ -7,7 +7,7 @@ package Business.WorkQueue;
 
 /**
  *
- * @author vidhi
+ * @author jan
  */
 public class VictimWorkRequest extends WorkRequest{
     private String Description;

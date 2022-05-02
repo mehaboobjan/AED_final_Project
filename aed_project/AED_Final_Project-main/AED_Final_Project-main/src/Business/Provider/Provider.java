@@ -9,7 +9,7 @@ import Business.WorkQueue.WorkRequestQueue;
 
 /**
  *
- * @author vidhi
+ * @author sarvesh
  */
 public class Provider {
     private String supplierName;

@@ -18,7 +18,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author ymayank97
+ * @author rajen
  */
 public class DoctorWorkArea extends javax.swing.JPanel {
     private JPanel userProcessContainer;
@@ -91,7 +91,7 @@ public class DoctorWorkArea extends javax.swing.JPanel {
 
         jPanel2.setBackground(new java.awt.Color(243, 235, 255));
 
-        jPanel3.setBackground(new java.awt.Color(113, 88, 205));
+        jPanel3.setBackground(new java.awt.Color(255, 0, 0));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -150,7 +150,6 @@ public class DoctorWorkArea extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tblRequests);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(153, 0, 153));
         jLabel2.setText("Welcome, You're logged in as Doctor.");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);

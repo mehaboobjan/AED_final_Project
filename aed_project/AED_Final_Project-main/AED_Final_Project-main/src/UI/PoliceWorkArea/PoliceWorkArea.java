@@ -18,7 +18,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author ymayank97
+ * @author jan
  */
 public class PoliceWorkArea extends javax.swing.JPanel {
     private JPanel userProcessContainer;

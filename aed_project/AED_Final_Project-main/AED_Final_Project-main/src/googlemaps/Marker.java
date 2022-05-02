@@ -7,7 +7,7 @@ package googlemaps;
 
 /**
  *
- * @author asimsinanyuksel
+ * @author sarvesh
  */
 public class Marker {
     

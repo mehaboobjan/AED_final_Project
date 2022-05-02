@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author ymayank97
+ * @author jan
  */
 public class UserAccountDirectory {
     

@@ -15,7 +15,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author vidhi
+ * @author sarvesh
  */
 public class PoliceRole extends Role{
     //overriding main panel with police work area whenever police role is called

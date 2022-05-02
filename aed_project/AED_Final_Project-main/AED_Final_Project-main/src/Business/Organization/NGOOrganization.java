@@ -12,7 +12,7 @@ import java.util.HashSet;
 
 /**
  *
- * @author vidhi
+ * @author jan
  */
 public class NGOOrganization extends Organization{
     NGODirectory ngoList;

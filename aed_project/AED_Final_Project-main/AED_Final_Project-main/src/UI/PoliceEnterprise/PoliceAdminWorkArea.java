@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author vidhi
+ * @author jan
  */
 public class PoliceAdminWorkArea extends javax.swing.JPanel {
 

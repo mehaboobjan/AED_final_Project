@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author ymayank97
+ * @author rajen
  */
 public class EventMakerAdminWorkArea extends javax.swing.JPanel {
 

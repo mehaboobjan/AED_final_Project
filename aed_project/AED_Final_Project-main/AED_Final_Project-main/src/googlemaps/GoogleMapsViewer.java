@@ -19,7 +19,7 @@ import javafx.scene.web.WebView;
 
 /**
  *
- * @author asimsinanyuksel
+ * @author sarvesh
  */
 public class GoogleMapsViewer extends JFXPanel {
 

@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author vidhi
+ * @author rajen
  */
 public class FireManDirectory {
     private ArrayList<FireMan> fireManList;
